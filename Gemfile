@@ -4,7 +4,14 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
+gem 'mongo'
+gem 'mongoid'
+gem 'bson'
+gem 'journey', git: 'git@github.com:simplybusiness/dont_stop_believin.git'
+gem 'simply_shopping', git: 'git@github.com:simplybusiness/simply_shopping.git'
+gem 'journey_rails', git: 'git@github.com:simplybusiness/dont_stop_believin_in_rails.git'
+gem 'journey_mongoid', git: 'git@github.com:simplybusiness/dont_stop_believin_in_mongoid.git'
+gem 'jimmy', git: 'git@github.com:simplybusiness/jimmy.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
