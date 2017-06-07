@@ -1,3 +1,44 @@
+GIT
+  remote: git@github.com:simplybusiness/dont_stop_believin.git
+  revision: 830e7f3f908f0ca29633ffdfdb7d4944d13f4346
+  specs:
+    journey (1.9.1)
+      rgl
+      simply_shopping
+
+GIT
+  remote: git@github.com:simplybusiness/dont_stop_believin_in_mongoid.git
+  revision: 4debe42a28912b1e59f8733b81f6f299e9c012c2
+  specs:
+    journey_mongoid (1.1.0)
+      journey
+      mongoid (>= 5.0, < 7)
+      simply_shopping
+
+GIT
+  remote: git@github.com:simplybusiness/dont_stop_believin_in_rails.git
+  revision: 9a9a4071accea0cbc52b8b67307dd0a0d98cc3b7
+  specs:
+    journey_rails (0.3.2)
+      journey
+      journey_mongoid
+      rails
+
+GIT
+  remote: git@github.com:simplybusiness/jimmy.git
+  revision: 2d8852f5e8380ab2eb427be1c97722713de7b8c0
+  specs:
+    jimmy (0.2.0)
+      actionpack
+      rack (>= 1.4)
+
+GIT
+  remote: git@github.com:simplybusiness/simply_shopping.git
+  revision: 4e751e857f4bef796157d63e6c4ffa3aa5da2f0d
+  specs:
+    simply_shopping (0.0.3)
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +81,7 @@ GEM
       tzinfo (~> 1.1)
     arel (7.1.4)
     bindex (0.5.0)
+    bson (4.2.1)
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.2.2)
@@ -63,6 +105,7 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    lazy_priority_queue (0.1.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -76,6 +119,11 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
+    mongo (2.4.2)
+      bson (>= 4.2.1, < 5.0.0)
+    mongoid (6.1.1)
+      activemodel (~> 5.0)
+      mongo (>= 2.4.1, < 3.0.0)
     multi_json (1.12.1)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -111,6 +159,9 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    rgl (0.5.3)
+      lazy_priority_queue (~> 0.1.0)
+      stream (~> 0.5.0)
     sass (3.4.24)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -130,6 +181,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stream (0.5)
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.7)
@@ -153,14 +205,22 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson
   byebug
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
+  jimmy!
+  journey!
+  journey_mongoid!
+  journey_rails!
   jquery-rails
   listen (~> 3.0.5)
+  mongo
+  mongoid
   puma (~> 3.0)
   rails (~> 5.0.3)
   sass-rails (~> 5.0)
+  simply_shopping!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
