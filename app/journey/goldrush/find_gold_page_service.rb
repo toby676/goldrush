@@ -6,9 +6,15 @@ module Goldrush
     end
 
     def process
-      # TODO validate and store the submitted data
-      # return an instance of SuccessResult or FailureResult
+      journey_data.push(:text, text)
+
       Journey::SuccessResult.new
+    end
+
+    private
+
+    def text
+      context.params[:text]
     end
 
   end
